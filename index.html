@@ -1,738 +1,785 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agency</title>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://unpkg.com/motion/dist/motion.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <header class="navbar">
-        <div class="navbarContent">
-            <a href="#" class="logoLink">
-                <img src="images/polygon.png" alt="">
-                <span class="logoText">Agency</span>
-            </a>
+      <div class="navbarContent">
+        <a href="#" class="logoLink">
+          <img src="images/polygon.png" alt="" />
+          <span class="logoText">Agency</span>
+        </a>
 
-            <nav class="desktopNav">
-                <ul class="navList">
-                    <li><a href="#about" class="navLink">About</a></li>
-                    <li><a href="#services" class="navLink">Services</a></li>
-                    <li><a href="#pricing" class="navLink">Pricing</a></li>
-                    <li><a href="#blog" class="navLink">Blog</a></li>
-                </ul>
-            </nav>
+        <nav class="desktopNav" aria-label="Main navigation">
+          <ul class="navList">
+            <li><a href="#about" class="navLink">About</a></li>
+            <li><a href="#services" class="navLink">Services</a></li>
+            <li><a href="#pricing" class="navLink">Pricing</a></li>
+            <li><a href="#blog" class="navLink">Blog</a></li>
+          </ul>
+        </nav>
 
-            <div class="desktopContact">
-                <button class="contactBtn">CONTACT</button>
-            </div>
-
-            <div class="mobileToggle">
-                <button id="menuToggle" class="toggleBtn">
-                    <i id="hamburgerIcon" class="fa-solid fa-bars"></i>
-                    <i id="closeIcon" class="fa-solid fa-xmark itIsHidden"></i>
-                </button>
-            </div>
+        <div class="desktopContact">
+          <a href="#contact" class="buttonLink contactBtn">CONTACT</a>
         </div>
 
-        <div id="mobileMenu" class="mobileNav menuHidden">
-            <div class="mobileNavContent">
-                <a href="#about" class="mobileNavLink">About</a>
-                <a href="#services" class="mobileNavLink">Services</a>
-                <a href="#pricing" class="mobileNavLink">Pricing</a>
-                <a href="#blog" class="mobileNavLink">Blog</a>
-                <div class="mobileContact">
-                    <button class="contactBtn">CONTACT</button>
-                </div>
-            </div>
+        <div class="mobileToggle">
+          <button
+            id="menuToggle"
+            class="toggleBtn"
+            type="button"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <span class="menuIcon" aria-hidden="true"
+              ><span></span><span></span><span></span
+            ></span>
+          </button>
         </div>
+      </div>
+
+      <nav
+        id="mobileMenu"
+        class="mobileNav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <div class="mobileNavContent">
+          <a href="#about" class="mobileNavLink">About</a>
+          <a href="#services" class="mobileNavLink">Services</a>
+          <a href="#pricing" class="mobileNavLink">Pricing</a>
+          <a href="#blog" class="mobileNavLink">Blog</a>
+          <div class="mobileContact">
+            <a href="#contact" class="buttonLink contactBtn">CONTACT</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <div class="content modern_studio">
+      <div class="content modern_studio">
+        <div class="heroContent">
+          <h2>MODERN STUDIO</h2>
+          <h1>We're Help To Build Your Dream Project</h1>
+          <p class="paragraph">
+            Agency provides a full service range including technical skills,
+            design, business understanding.
+          </p>
+          <div class="button">
+            <a href="#how-we-work" class="buttonLink work">HOW WE WORK</a>
+            <a href="#contact" class="buttonLink contact">Contact Us</a>
+          </div>
+          <div class="meta">
             <div>
-                <h2>MODERN STUDIO</h2>
-                <h1>We're Help To Build Your Dream Project</h1>
-                <p class="paragraph">Agency provides a full service range including technical skills, design, business
-                    understanding.</p>
-                <div class="button">
-                    <button class="work"> HOW WE WORK</button>
-                    <button class="contact"> Contact Us</button>
-                </div>
-                <div class="meta">
-                    <div>
-                        <img src="images/user.svg" alt="">
-                    </div>
-                    <div>
-                        <p class="paragraph">"Put themselves in the merchant's shoes"</p>
-                        <p class="read_more">Meta Inc.</p>
-                    </div>
-                </div>
+              <img src="images/user.svg" alt="" />
             </div>
-            <img class="modern_Image" src="images/pic.svg" alt="">
+            <div>
+              <p class="paragraph">"Put themselves in the merchant's shoes"</p>
+              <p class="read_more">Meta Inc.</p>
+            </div>
+          </div>
         </div>
-    </main>
-
-    <section>
+        <img class="modern_Image" src="images/pic.svg" alt="" />
+      </div>
+      <section>
         <div class="clients">
-            <div class="slider">
-                <img src="images/Bitmap.svg">
-                <img src="images/Bitmap (1).svg">
-                <img src="images/Bitmap (2).svg">
-                <img src="images/Bitmap (3).svg">
-                <img src="images/Bitmap (4).svg">
+          <div class="slider">
+            <img src="images/Bitmap.svg" alt="" />
+            <img src="images/Bitmap (1).svg" alt="" />
+            <img src="images/Bitmap (2).svg" alt="" />
+            <img src="images/Bitmap (3).svg" alt="" />
+            <img src="images/Bitmap (4).svg" alt="" />
 
-                <img src="images/Bitmap.svg">
-                <img src="images/Bitmap (1).svg">
-                <img src="images/Bitmap (2).svg">
-                <img src="images/Bitmap (3).svg">
-                <img src="images/Bitmap (4).svg">
-            </div>
+            <img src="images/Bitmap.svg" alt="" aria-hidden="true" />
+            <img src="images/Bitmap (1).svg" alt="" aria-hidden="true" />
+            <img src="images/Bitmap (2).svg" alt="" aria-hidden="true" />
+            <img src="images/Bitmap (3).svg" alt="" aria-hidden="true" />
+            <img src="images/Bitmap (4).svg" alt="" aria-hidden="true" />
+          </div>
         </div>
 
         <div class="about" id="about">
-
-            <div class="about_content content">
-                <img class="about_Image" src="images/experience.svg" alt="">
-                <div>
-                    <h2>ABOUT</h2>
-                    <h3>An experience <br> Design Agency</h3>
-                    <p>Provides a full service range</p>
-                    <p class="paragraph"> Ability to put themselves in the merchant's shoes. It is meant to partner on
-                        the
-                        long run, and work as an extension of the merchant's team.</p>
-                    <div class="button">
-                        <button class="aboutUs">ABOUT US</button>
-
-                    </div>
-
-                </div>
+          <div class="about_content content">
+            <img class="about_Image" src="images/experience.svg" alt="" />
+            <div>
+              <h2>ABOUT</h2>
+              <h3>
+                An experience <br />
+                Design Agency
+              </h3>
+              <p>Provides a full service range</p>
+              <p class="paragraph">
+                Ability to put themselves in the merchant's shoes. It is meant
+                to partner on the long run, and work as an extension of the
+                merchant's team.
+              </p>
+              <div class="button">
+                <button type="button" class="aboutUs">ABOUT US</button>
+              </div>
             </div>
-
+          </div>
         </div>
 
-
         <div class="numbers">
-  <div class="num-item">
-    <h6>42%</h6>
-    <p>Years Of Experience</p>
-  </div>
+          <div class="num-item">
+            <h6>42%</h6>
+            <p>Years Of Experience</p>
+          </div>
 
-  <div class="num-item">
-    <h6>73+</h6>
-    <p>Agency Members</p>
-  </div>
+          <div class="num-item">
+            <h6>73+</h6>
+            <p>Agency Members</p>
+          </div>
 
-  <div class="num-item">
-    <h6>5.000</h6>
-    <p>Projects Complete</p>
-  </div>
-</div>
+          <div class="num-item">
+            <h6>5.000</h6>
+            <p>Projects Complete</p>
+          </div>
+        </div>
 
-
-        <div class="howWeWork">
-            <div class="how">
-                <h2>HOW WE WORK</h2>
-                <h4>Making Your Projects Look Awesome </h4>
-                <p class="paragraph">Technical skills, design, business understanding, ability to put themselves in
-                    the
-                    merchant's shoes.</p>
-                <p class="read_more"> Read More</p>
-
+        <div class="howWeWork" id="how-we-work">
+          <div class="how">
+            <h2>HOW WE WORK</h2>
+            <h4>Making Your Projects Look Awesome</h4>
+            <p class="paragraph">
+              Technical skills, design, business understanding, ability to put
+              themselves in the merchant's shoes.
+            </p>
+            <p class="read_more">Read More</p>
+          </div>
+          <div class="read">
+            <div>
+              <h6>1</h6>
+              <h5>Full service range including</h5>
             </div>
-            <div class="read">
-                <div>
-                    <h6>1</h6>
-                    <h5>Full service range including</h5>
-                </div>
-                <div>
-                    <h6>2</h6>
-                    <h5>Technical skills, design, business</h5>
-                </div>
-                <div>
-                    <h6>3</h6>
-                    <h5>Themselves in the merchant's</h5>
-                </div>
-
+            <div>
+              <h6>2</h6>
+              <h5>Technical skills, design, business</h5>
             </div>
+            <div>
+              <h6>3</h6>
+              <h5>Themselves in the merchant's</h5>
+            </div>
+          </div>
         </div>
 
         <div class="video about">
+          <div class="content">
+            <img class="video_Image" src="images/unlock.svg" alt="" />
+            <div>
+              <h2>VIDEO REEL</h2>
+              <h4>Unlock The Greatest Value Possible</h4>
 
-            <div class="content">
-                <img class="video_Image" src="images/unlock.svg" alt="">
-                <div>
-                    <h2>VIDEO REEL</h2>
-                    <h4>Unlock The Greatest Value Possible</h4>
-
-                    <p class="paragraph"> Design, business understanding, ability to put themselves in the merchant's
-                        shoes
-                        meant to partner.</p>
-
-                </div>
+              <p class="paragraph">
+                Design, business understanding, ability to put themselves in the
+                merchant's shoes meant to partner.
+              </p>
             </div>
-
+          </div>
         </div>
 
         <div class="features about">
+          <div class="content">
+            <div>
+              <h2>FEATURE</h2>
+              <h3>Give Your Site <br />A New Look</h3>
+              <p>
+                Service range including technical skills, design, business
+                understanding.
+              </p>
 
-            <div class="content">
-                <div>
-                    <h2>FEATURE</h2>
-                    <h3>Give Your Site
-                        <br>A New Look</h3>
-                    <p>Service range including technical skills, design, business understanding.</p>
-
-                    <ul>
-                        <li>Range including technical skills</li>
-                        <li>Business understanding</li>
-                        <li>Partner on the long run</li>
-                    </ul>
-
-                </div>
-                <img class="features_Image" src="images/feature.svg" alt="">
-
+              <ul>
+                <li>Range including technical skills</li>
+                <li>Business understanding</li>
+                <li>Partner on the long run</li>
+              </ul>
             </div>
-
+            <img class="features_Image" src="images/feature.svg" alt="" />
+          </div>
         </div>
 
         <div class="features_Two about">
+          <div class="long">
+            <h2>FEATURE</h2>
+            <p>Long run, and work as an extension of the merchant's team.</p>
+            <p class="read_more">Read More</p>
+          </div>
+          <div class="features-cards">
+            <div class="card">
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img
+                  class="icon-front"
+                  src="images/Combined Shape.svg"
+                  alt=""
+                />
+              </div>
 
-            <div class="long">
-                <h2>FEATURE</h2>
-                <P>Long run, and work as an extension of the merchant's team.</P>
-                <p class="read_more">Read More</p>
-
-            </div>
-            <div class="features-cards">
-                <div class="card">
-                    <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/Combined Shape.svg" alt="" />
-                    </div>
-
-                    <h5>Professional</h5>
-                    <p class="paragraph">Full service range including technical skills, design.</p>
-                </div>
-
-                <div class="light">
-                    <h5>Accessibility</h5>
-                    <p class="paragraph">Business understanding, ability to put themselves.</p>
-                </div>
+              <h5>Professional</h5>
+              <p class="paragraph">
+                Full service range including technical skills, design.
+              </p>
             </div>
 
+            <div class="light">
+              <h5>Accessibility</h5>
+              <p class="paragraph">
+                Business understanding, ability to put themselves.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="service about" id="services">
-
-            <div class="content">
-                <img class="about_Image" src="images/service_image.svg" alt="">
+          <div class="content">
+            <img class="about_Image" src="images/service_image.svg" alt="" />
+            <div>
+              <h2>SERVICE</h2>
+              <h3>
+                Making Complex <br />
+                Digital Products
+              </h3>
+              <p>
+                Agency provides a full service range including technical skills,
+                design, business.
+              </p>
+              <div class="meta">
                 <div>
-                    <h2>SERVICE</h2>
-                    <h3>Making Complex
-                         <br> Digital Products</h3>
-                    <p>Agency provides a full service range including technical skills, design, business.</p>
-                    <div class="meta">
-                        <div>
-                            <img src="images/service_user.svg" alt="">
-                        </div>
-                        <div>
-                            <p class="paragraph">"Understanding, ability to put themselves in the merchant's shoes. It is
-                                meant to partner."</p>
-                            <p class="read_more">Jenny Murtaugh</p>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <button class=" explore aboutUs">Explore</button>
-
-                    </div>
-
+                  <img src="images/service_user.svg" alt="" />
                 </div>
+                <div>
+                  <p class="paragraph">
+                    "Understanding, ability to put themselves in the merchant's
+                    shoes. It is meant to partner."
+                  </p>
+                  <p class="read_more">Jenny Murtaugh</p>
+                </div>
+              </div>
+              <div class="button">
+                <button type="button" class="explore aboutUs">Explore</button>
+              </div>
             </div>
-
+          </div>
         </div>
 
         <div class="service_two">
-            <div class="service">
-                <h2>SERVICE</h2>
-                <h4>How Our Agency Can Help</h4>
+          <div class="service">
+            <h2>SERVICE</h2>
+            <h4>How Our Agency Can Help</h4>
+          </div>
+          <div class="service_two_card">
+            <div class="card">
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img
+                  class="icon-front"
+                  src="images/service_design.svg"
+                  alt=""
+                />
+              </div>
+
+              <h5>Design</h5>
+              <p class="paragraph">
+                Agency provides a full service range including technical skills,
+                design.
+              </p>
+              <p class="read_more">Learn More</p>
             </div>
-            <div class="service_two_card ">
-                <div class="card">
-                    <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/service_design.svg" alt="" />
-                    </div>
+            <div class="card development">
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img
+                  class="icon-front"
+                  src="images/service_development.svg"
+                  alt=""
+                />
+              </div>
 
-                    <h5>Design</h5>
-                    <p class="paragraph">Agency provides a full service range including technical skills, design.</p>
-                    <p class="read_more"> Learn More</p>
-
-                </div>
-                <div class="card development">
-                    <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/service_development.svg" alt="" />
-                    </div>
-
-                    <h5>Development</h5>
-                    <p class="paragraph">Full service range including technical skills, design, business.</p>
-                    <p class="read_more">Discover More</p>
-
-                </div>
-                <div class="card">
-                    <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/service_marketing.svg" alt="" />
-                    </div>
-
-                    <h5>Marketing</h5>
-                    <p class="paragraph"> Technical skills, design, business understanding, ability.</p>
-                    <p class="read_more">Explore Now</p>
-
-                </div>
-
+              <h5>Development</h5>
+              <p class="paragraph">
+                Full service range including technical skills, design, business.
+              </p>
+              <p class="read_more">Discover More</p>
             </div>
-        </div>
+            <div class="card">
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img
+                  class="icon-front"
+                  src="images/service_marketing.svg"
+                  alt=""
+                />
+              </div>
 
-       <div class="testimonials">
-  <div class="testimonial_style">
-    <h2>Testimonials</h2>
-    <h3>What Our<br>Clients Saying</h3>
-  </div>
-
-  <div class="testimonial_cards">
-
-    <div class="testimonial_group">
-      <div class="card card_0">
-        <img class="star" src="images/star.svg" alt="stars">
-
-        <p class="paragraph">
-          A digital agency is a business you hire to outsource your digital
-          marketing efforts, instead of handling in-house. They can provide your
-          business with a variety of digital solutions to promote your product
-          or service online and help you.
-        </p>
-
-        <div class="meta">
-          <div>
-            <img src="images/alan.svg" alt="Alan Martí">
-          </div>
-          <div>
-            <h5>Alan Martí</h5>
-            <p class="paragraph">Meta Inc.</p>
+              <h5>Marketing</h5>
+              <p class="paragraph">
+                Technical skills, design, business understanding, ability.
+              </p>
+              <p class="read_more">Explore Now</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card card_1">
-        <img class="star" src="images/star.svg" alt="stars">
-
-        <p class="paragraph">
-          Outsource your digital marketing efforts, instead of handling in-house.
-          They can provide your business with a variety.
-        </p>
-
-        <div class="meta">
-          <div>
-            <img src="images/graham.svg" alt="Graham Griffiths">
+        <div class="testimonials">
+          <div class="testimonial_style">
+            <h2>Testimonials</h2>
+            <h3>What Our<br />Clients Saying</h3>
           </div>
-          <div>
-            <h5>Graham Griffiths</h5>
-            <p class="paragraph">Twitor</p>
+
+          <div class="testimonial_cards">
+            <div class="testimonial_group">
+              <div class="card card_0">
+                <img class="star" src="images/star.svg" alt="stars" />
+
+                <p class="paragraph">
+                  A digital agency is a business you hire to outsource your
+                  digital marketing efforts, instead of handling in-house. They
+                  can provide your business with a variety of digital solutions
+                  to promote your product or service online and help you.
+                </p>
+
+                <div class="meta">
+                  <div>
+                    <img src="images/alan.svg" alt="Alan Martí" />
+                  </div>
+                  <div>
+                    <h5>Alan Martí</h5>
+                    <p class="paragraph">Meta Inc.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card_1">
+                <img class="star" src="images/star.svg" alt="stars" />
+
+                <p class="paragraph">
+                  Outsource your digital marketing efforts, instead of handling
+                  in-house. They can provide your business with a variety.
+                </p>
+
+                <div class="meta">
+                  <div>
+                    <img src="images/graham.svg" alt="Graham Griffiths" />
+                  </div>
+                  <div>
+                    <h5>Graham Griffiths</h5>
+                    <p class="paragraph">Twitor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial_group">
+              <div class="card card_2">
+                <img class="star" src="images/star.svg" alt="stars" />
+
+                <p class="paragraph">
+                  Outsource your digital marketing efforts, instead of handling
+                  in-house. They can provide your business with a variety.
+                </p>
+
+                <div class="meta">
+                  <div>
+                    <img src="images/richardo.svg" alt="Richardo Kann" />
+                  </div>
+                  <div>
+                    <h5>Richardo Kann</h5>
+                    <p class="paragraph">Photogram</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card_3">
+                <img class="star" src="images/star.svg" alt="stars" />
+
+                <p class="paragraph">
+                  Promote your product or service online and help you hit your
+                  marketing goals and grow your business.
+                </p>
+
+                <div class="meta">
+                  <div>
+                    <img src="images/maria.svg" alt="Maria Trofimova" />
+                  </div>
+                  <div>
+                    <h5>Maria Trofimova</h5>
+                    <p class="paragraph">Whochat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button">
+            <button type="button">SEE ALL</button>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="testimonial_group">
-      <div class="card card_2">
-        <img class="star" src="images/star.svg" alt="stars">
-
-        <p class="paragraph">
-          Outsource your digital marketing efforts, instead of handling in-house.
-          They can provide your business with a variety.
-        </p>
-
-        <div class="meta">
-          <div>
-            <img src="images/richardo.svg" alt="Richardo Kann">
-          </div>
-          <div>
-            <h5>Richardo Kann</h5>
-            <p class="paragraph">Photogram</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card_3">
-        <img class="star" src="images/star.svg" alt="stars">
-
-        <p class="paragraph">
-          Promote your product or service online and help you hit your marketing
-          goals and grow your business.
-        </p>
-
-        <div class="meta">
-          <div>
-            <img src="images/maria.svg" alt="Maria Trofimova">
-          </div>
-          <div>
-            <h5>Maria Trofimova</h5>
-            <p class="paragraph">Whochat</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="button">
-    <button>SEE ALL</button>
-  </div>
-</div>
-
 
         <div class="pricing" id="pricing">
-            <div class="pricing-container">
-                <h2>PRICING</h2>
-                <h3>Check Our <br> Pricing Plans</h3>
-            </div>
-            <div class="pricing_cards ">
-                <div class="card card_1">
-                    <h2>CONSULTATION</h2>
+          <div class="pricing-container">
+            <h2>PRICING</h2>
+            <h3>
+              Check Our <br />
+              Pricing Plans
+            </h3>
+          </div>
+          <div class="pricing_cards">
+            <div class="card card_1">
+              <h2>CONSULTATION</h2>
 
-                    <h6>Free</h6>
-                    <p class="paragraph">Your digital marketing efforts, instead of handling in-house.</p>
+              <h6>Free</h6>
+              <p class="paragraph">
+                Your digital marketing efforts, instead of handling in-house.
+              </p>
 
-                    <ul>
-                        <li>Brand Design</li>
-                        <li class="minus">Market Analysis</li>
-                        <li class="minus">Production</li>
-                    </ul>
+              <ul>
+                <li>Brand Design</li>
+                <li class="minus">Market Analysis</li>
+                <li class="minus">Production</li>
+              </ul>
 
-                    <div class="button">
-                        <button class=" ">CONTACT US</button>
-
-                    </div>
-                </div>
-
-                <div class="card card_2">
-                    <p class="popular">Popular</p>
-                    <h2>DESIGN</h2>
-
-                    <h6>$1500</h6>
-                    <p class="paragraph">Provide your business with a variety of digital solutions to promote.</p>
-
-                    <ul>
-                        <li>Brand Design</li>
-                        <li>Market Analysis</li>
-                        <li class="minus">Production</li>
-                    </ul>
-
-                    <div class="button">
-                        <button class=" ">CONTACT US</button>
-
-                    </div>
-                </div>
-                <div class="card card_3">
-                    <h2>DESIGN + CODE</h2>
-
-                    <h6>$2900</h6>
-                    <p class="paragraph">Help you hit your marketing goals and grow your business.</p>
-
-                    <ul>
-                        <li>Brand Design</li>
-                        <li>Market Analysis</li>
-                        <li>Production</li>
-                    </ul>
-
-                    <div class="button">
-                        <button class=" ">CONTACT US</button>
-
-                    </div>
-                </div>
+              <div class="button">
+                <a href="#contact" class="buttonLink">CONTACT US</a>
+              </div>
             </div>
 
+            <div class="card card_2">
+              <p class="popular">Popular</p>
+              <h2>DESIGN</h2>
+
+              <h6>$1500</h6>
+              <p class="paragraph">
+                Provide your business with a variety of digital solutions to
+                promote.
+              </p>
+
+              <ul>
+                <li>Brand Design</li>
+                <li>Market Analysis</li>
+                <li class="minus">Production</li>
+              </ul>
+
+              <div class="button">
+                <a href="#contact" class="buttonLink">CONTACT US</a>
+              </div>
+            </div>
+            <div class="card card_3">
+              <h2>DESIGN + CODE</h2>
+
+              <h6>$2900</h6>
+              <p class="paragraph">
+                Help you hit your marketing goals and grow your business.
+              </p>
+
+              <ul>
+                <li>Brand Design</li>
+                <li>Market Analysis</li>
+                <li>Production</li>
+              </ul>
+
+              <div class="button">
+                <a href="#contact" class="buttonLink">CONTACT US</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="faq">
-            <div class="frequently">
-                <h2>FAQ</h2>
-                <h3>Frequently Asked <br> Question</h3>
-                <p class="paragraph">A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+          <div class="frequently">
+            <h2>FAQ</h2>
+            <h3>
+              Frequently Asked <br />
+              Question
+            </h3>
+            <p class="paragraph">
+              A digital agency is a business you hire to outsource your digital
+              marketing efforts, instead of handling in-house.
+            </p>
 
-             <p class="read_more">Contact Us</p>
-            </div>
-            <div class="faq-container">
+            <p class="read_more">Contact Us</p>
+          </div>
+          <div class="faq-container">
+            <details open>
+              <summary>
+                A digital agency is a business
+                <span class="arrow"></span>
+              </summary>
+              <p class="paragraph">
+                Digital marketing efforts, instead of handling in-house. They
+                can provide your business with a variety of digital solutions to
+                promote your product or service online and help you hit your
+                marketing goals and grow your business.
+              </p>
+            </details>
 
-  <details open>
-    <summary>
-      A digital agency is a business
-      <span class="arrow"></span>
-    </summary>
-    <p class="paragraph">
-      Digital marketing efforts, instead of handling in-house. They can provide 
-      your business with a variety of digital solutions to promote your product 
-      or service online and help you hit your marketing goals and grow your business.
-    </p>
-  </details>
+            <details>
+              <summary>
+                Hire to outsource your digital
+                <span class="arrow"></span>
+              </summary>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </details>
 
-  <details>
-    <summary>
-      Hire to outsource your digital
-      <span class="arrow"></span>
-    </summary>
-    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  </details>
+            <details>
+              <summary>
+                Marketing efforts
+                <span class="arrow"></span>
+              </summary>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </details>
 
-  <details>
-    <summary>
-      Marketing efforts
-      <span class="arrow"></span>
-    </summary>
-    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  </details>
-
-  <details>
-    <summary>
-      Can provide your business
-      <span class="arrow"></span>
-    </summary>
-    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  </details>
-
-</div>
-
+            <details>
+              <summary>
+                Can provide your business
+                <span class="arrow"></span>
+              </summary>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </details>
+          </div>
         </div>
 
-<div class="awards-section">
+        <div class="awards-section">
+          <h3>Our Awards</h3>
 
-    <h3>Our Awards</h3>
-
-    <div class="award-row">
-        <div class="left">
-            <img src="images/sofa.svg" class="award-img">
-            <span class="award-title">SOFA</span>
-        </div>
-
-        <span class="award-date">25 Oct, 2021</span>
-
-        <div class="right">
-            <span class="award-type">Awwwards</span>
-            <img src="images/awward.svg" class="award-logo">
-        </div>
-    </div>
-
-    <div class="award-row">
-        <div class="left">
-            <img src="images/keyboard.svg" class="award-img">
-            <span class="award-title">KeyBoard</span>
-        </div>
-
-        <span class="award-date">19 Oct, 2021</span>
-
-        <div class="right">
-            <span class="award-type">CSS Design Awards</span>
-            <img src="images/css.svg" class="award-logo">
-        </div>
-    </div>
-
-    <div class="award-row">
-        <div class="left">
-            <img src="images/work_media.svg" class="award-img">
-            <span class="award-title">Work Media</span>
-        </div>
-
-        <span class="award-date">7 Oct, 2021</span>
-
-        <div class="right">
-            <span class="award-type">The FWA</span>
-            <img src="images/fwa.svg" class="award-logo">
-        </div>
-    </div>
-
-    <p>
-        Want more awards? <a href="#">Explore Now</a>
-    </p>
-
-</div>
-
-
-<div class="blog-section" id="blog">
-
-    <h2>OUR BLOG</h2>
-    <div class="blog-header">
-        <h3>Latest Blog<br>Articles</h3>
-        <button class="button">DISCOVER ALL</button>
-    </div>
-
-    <div class="blog-cards">
-
-        <div class="blog-card">
-            <img src="images/stories.svg" class="blog-img">
-            <p class="">Stories</p>
-            <h5 class="">Agency is a business you hire to outsource</h5>
-            <p class="">5 Nov, 2021</p>
-        </div>
-
-        <div class="blog-card">
-            <img src="images/design.svg" class="blog-img">
-            <p class="">Design</p>
-            <h5 class="">Outsource your digital marketing efforts</h5>
-            <p class="">29 Oct, 2021</p>
-        </div>
-
-        <div class="blog-card">
-            <img src="images/stories.svg" class="blog-img">
-            <p class="">Marketing</p>
-            <h5 class="">Your business with a variety of digital</h5>
-            <p class="">21 Oct, 2021</p>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="newsletter-section">
-    <h4>Newsletter</h4>
-
-    <div class="newsletter-form">
-        <input type="email" placeholder="Your email">
-        <button>Subscribe</button>
-    </div>
-</div>
-
-<div class="map-section">
-    <div id="map"></div>
-
-    <div class="contact-card">
-        <h5>Get In Touch</h5>
-        <input type="email" placeholder="Your email" />
-        <select>
-            <option>Subject</option>
-            <option>Inquiry</option>
-            <option>Support</option>
-        </select>
-        <textarea placeholder="Message"></textarea>
-        <button>SUBMIT NOW</button>
-    </div>
-</div> 
-
-<div class="info-boxes">
-    <div class="info-item box_1">
-        <div>
-              <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/phone.svg" alt="" />
-                    </div>
-                    <h2>   PHONE</h2>
-        </div>
-        <p class="read_more" >+1 (234) 567-89-00</p>
-
-    </div>
-
-    <div class="info-item box_2">
-         <div>
-              <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/email.svg" alt="" />
-                    </div>
-                    <h2>EMAIL</h2>
-        </div>
-        <p class="read_more">info@agency.com</p>
-    </div>
-
-    <div class="info-item box_3">
-        <div>
-              <div class="icon-wrap">
-                        <img class="icon-bg" src="images/Oval.svg" alt="" />
-                        <img class="icon-front" src="images/address.svg" alt="" />
-                    </div>
-                    <h2>  ADDRESS</h2>
-        </div>
-        <p class="read_more">2247 Lunetta Street, TX 76301</p>
-    </div>
-</div>
-
- <div class="dream_Project">
-
-            <div class="dream_Content">
-                <div>
-                    <h4>We’re Help 
-To Build Your 
-Dream Project</h4>
-                    <p class="paragraph">A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house..</p>
-
-                    <div class="button">
-                        <button class=" ">CONTACT US</button>
-
-                    </div>
-
-                </div>
-                <img class="features_Image" src="images/dream_project.svg" alt="">
-
+          <div class="award-row">
+            <div class="left">
+              <img src="images/sofa.svg" class="award-img" alt="" />
+              <span class="award-title">SOFA</span>
             </div>
 
+            <span class="award-date">25 Oct, 2021</span>
+
+            <div class="right">
+              <span class="award-type">Awwwards</span>
+              <img src="images/awward.svg" class="award-logo" alt="" />
+            </div>
+          </div>
+
+          <div class="award-row">
+            <div class="left">
+              <img src="images/keyboard.svg" class="award-img" alt="" />
+              <span class="award-title">KeyBoard</span>
+            </div>
+
+            <span class="award-date">19 Oct, 2021</span>
+
+            <div class="right">
+              <span class="award-type">CSS Design Awards</span>
+              <img src="images/css.svg" class="award-logo" alt="" />
+            </div>
+          </div>
+
+          <div class="award-row">
+            <div class="left">
+              <img src="images/work_media.svg" class="award-img" alt="" />
+              <span class="award-title">Work Media</span>
+            </div>
+
+            <span class="award-date">7 Oct, 2021</span>
+
+            <div class="right">
+              <span class="award-type">The FWA</span>
+              <img src="images/fwa.svg" class="award-logo" alt="" />
+            </div>
+          </div>
+
+          <p>Want more awards? <a href="#">Explore Now</a></p>
         </div>
-    </section>
 
-    <div class="footer">
+        <div class="blog-section" id="blog">
+          <h2>OUR BLOG</h2>
+          <div class="blog-header">
+            <h3>Latest Blog<br />Articles</h3>
+            <button type="button">DISCOVER ALL</button>
+          </div>
 
-    <div class="footer-top">
+          <div class="blog-cards">
+            <div class="blog-card">
+              <img src="images/stories.svg" class="blog-img" alt="" />
+              <p>Stories</p>
+              <h5>Agency is a business you hire to outsource</h5>
+              <p>5 Nov, 2021</p>
+            </div>
+
+            <div class="blog-card">
+              <img src="images/design.svg" class="blog-img" alt="" />
+              <p>Design</p>
+              <h5>Outsource your digital marketing efforts</h5>
+              <p>29 Oct, 2021</p>
+            </div>
+
+            <div class="blog-card">
+              <img src="images/stories.svg" class="blog-img" alt="" />
+              <p>Marketing</p>
+              <h5>Your business with a variety of digital</h5>
+              <p>21 Oct, 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-section">
+          <h4>Newsletter</h4>
+
+          <div class="newsletter-form">
+            <input
+              type="email"
+              name="newsletter-email"
+              aria-label="Email for newsletter"
+              autocomplete="email"
+              placeholder="Your email"
+            />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="map-section" id="contact">
+          <div id="map" aria-label="Agency location map"></div>
+          <p id="mapFallback" class="map-fallback">
+            The map is unavailable. You can find our contact details below.
+          </p>
+
+          <div class="contact-card">
+            <h5>Get In Touch</h5>
+            <input
+              type="email"
+              name="contact-email"
+              aria-label="Your email"
+              autocomplete="email"
+              placeholder="Your email"
+            />
+            <select name="subject" aria-label="Subject">
+              <option value="">Subject</option>
+              <option value="inquiry">Inquiry</option>
+              <option value="support">Support</option>
+            </select>
+            <textarea
+              name="message"
+              aria-label="Message"
+              placeholder="Message"
+            ></textarea>
+            <button type="button">SUBMIT NOW</button>
+          </div>
+        </div>
+
+        <div class="info-boxes">
+          <div class="info-item box_1">
+            <div>
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img class="icon-front" src="images/phone.svg" alt="" />
+              </div>
+              <h2>PHONE</h2>
+            </div>
+            <p class="read_more">+1 (234) 567-89-00</p>
+          </div>
+
+          <div class="info-item box_2">
+            <div>
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img class="icon-front" src="images/email.svg" alt="" />
+              </div>
+              <h2>EMAIL</h2>
+            </div>
+            <p class="read_more">info@agency.com</p>
+          </div>
+
+          <div class="info-item box_3">
+            <div>
+              <div class="icon-wrap">
+                <img class="icon-bg" src="images/Oval.svg" alt="" />
+                <img class="icon-front" src="images/address.svg" alt="" />
+              </div>
+              <h2>ADDRESS</h2>
+            </div>
+            <p class="read_more">2247 Lunetta Street, TX 76301</p>
+          </div>
+        </div>
+
+        <div class="dream_Project">
+          <div class="dream_Content">
+            <div>
+              <h4>We’re Help To Build Your Dream Project</h4>
+              <p class="paragraph">
+                A digital agency is a business you hire to outsource your
+                digital marketing efforts, instead of handling in-house..
+              </p>
+
+              <div class="button">
+                <a href="#contact" class="buttonLink">CONTACT US</a>
+              </div>
+            </div>
+            <img class="features_Image" src="images/dream_project.svg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h3 class="footer-logo">Agency</h3>
+        </div>
 
         <div class="footer-col">
-            <h3 class="footer-logo">Agency</h3>
+          <h4>MENU</h4>
+          <p>About</p>
+          <p>Services</p>
+          <p>Blog</p>
+          <p>Contact</p>
         </div>
 
         <div class="footer-col">
-            <h4>MENU</h4>
-            <p>About</p>
-            <p>Services</p>
-            <p>Blog</p>
-            <p>Contact</p>
-        </div>
-
-        <div class="footer-col">
-            <h4>SERVICE</h4>
-            <p>Design</p>
-            <p>Development</p>
-            <p>Marketing</p>
-            <p>See More</p>
+          <h4>SERVICE</h4>
+          <p>Design</p>
+          <p>Development</p>
+          <p>Marketing</p>
+          <p>See More</p>
         </div>
 
         <div class="footer-col social">
-            <div class="icon-circle"><i class="fa-brands fa-facebook-f"></i></div>
-            <div class="icon-circle"><i class="fa-brands fa-twitter"></i></div>
-            <div class="icon-circle"><i class="fa-brands fa-instagram"></i></div>
+          <div class="icon-circle"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="icon-circle"><i class="fa-brands fa-twitter"></i></div>
+          <div class="icon-circle"><i class="fa-brands fa-instagram"></i></div>
         </div>
+      </div>
 
-    </div>
+      <hr class="footer-line" />
 
-    <hr class="footer-line" />
-
-    <div class="footer-bottom">
+      <div class="footer-bottom">
         <p>Copyright © 2025 Laaqiq. All Rights Reserved.</p>
         <div class="footer-right-links">
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
         </div>
-    </div>
-</div>
+      </div>
+    </footer>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
-</body>
-
+    <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script defer src="script.js"></script>
+  </body>
 </html>
